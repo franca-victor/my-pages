@@ -1,0 +1,1995 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victor & Andinho's Brazil Takeover 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #D4A853;
+  --gold-light: #F0D78C;
+  --dark: #1A1A2E;
+  --darker: #0F0F1A;
+  --accent: #E94560;
+  --green: #2ECC71;
+  --blue: #3498DB;
+  --purple: #9B59B6;
+  --orange: #F39C12;
+  --teal: #1ABC9C;
+  --card-bg: rgba(255,255,255,0.04);
+  --card-border: rgba(212,168,83,0.15);
+  --text: #E8E8E8;
+  --text-dim: #8A8A9A;
+}
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+background: var(–darker);
+color: var(–text);
+font-family: ‘DM Sans’, sans-serif;
+line-height: 1.6;
+overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+position: relative;
+padding: 2rem;
+background:
+radial-gradient(ellipse at 20% 50%, rgba(233,69,96,0.12) 0%, transparent 50%),
+radial-gradient(ellipse at 80% 20%, rgba(212,168,83,0.1) 0%, transparent 50%),
+radial-gradient(ellipse at 50% 80%, rgba(155,89,182,0.08) 0%, transparent 50%),
+var(–darker);
+}
+
+.hero::before {
+content: ‘’;
+position: absolute;
+inset: 0;
+background: url(“data:image/svg+xml,%3Csvg width=‘60’ height=‘60’ viewBox=‘0 0 60 60’ xmlns=‘http://www.w3.org/2000/svg’%3E%3Cg fill=‘none’ fill-rule=‘evenodd’%3E%3Cg fill=’%23D4A853’ fill-opacity=‘0.03’%3E%3Cpath d=‘M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z’/%3E%3C/g%3E%3C/g%3E%3C/svg%3E”);
+opacity: 0.5;
+}
+
+.hero-pre {
+font-family: ‘DM Sans’, sans-serif;
+text-transform: uppercase;
+letter-spacing: 6px;
+font-size: 0.75rem;
+color: var(–gold);
+margin-bottom: 1.5rem;
+position: relative;
+z-index: 1;
+animation: fadeDown 1s ease-out;
+}
+
+.hero h1 {
+font-family: ‘Playfair Display’, serif;
+font-size: clamp(2.5rem, 7vw, 5.5rem);
+font-weight: 900;
+line-height: 1.1;
+position: relative;
+z-index: 1;
+animation: fadeUp 1s ease-out 0.2s both;
+}
+
+.hero h1 .amp {
+font-family: ‘Satisfy’, cursive;
+color: var(–accent);
+font-weight: 400;
+display: inline-block;
+transform: rotate(-3deg);
+font-size: 1.2em;
+}
+
+.hero h1 .gold { color: var(–gold); }
+
+.hero-sub {
+font-size: 1.15rem;
+color: var(–text-dim);
+margin-top: 1.5rem;
+max-width: 500px;
+position: relative;
+z-index: 1;
+animation: fadeUp 1s ease-out 0.4s both;
+}
+
+.hero-dates {
+display: flex;
+gap: 2rem;
+margin-top: 2.5rem;
+position: relative;
+z-index: 1;
+animation: fadeUp 1s ease-out 0.6s both;
+}
+
+.hero-date {
+background: var(–card-bg);
+border: 1px solid var(–card-border);
+border-radius: 12px;
+padding: 1rem 1.5rem;
+text-align: center;
+backdrop-filter: blur(10px);
+}
+
+.hero-date small {
+display: block;
+font-size: 0.7rem;
+text-transform: uppercase;
+letter-spacing: 3px;
+color: var(–gold);
+margin-bottom: 0.3rem;
+}
+
+.hero-date span {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.1rem;
+font-weight: 700;
+}
+
+.flight-arrow {
+display: flex;
+align-items: center;
+color: var(–accent);
+font-size: 1.5rem;
+}
+
+.scroll-hint {
+position: absolute;
+bottom: 2rem;
+left: 50%;
+transform: translateX(-50%);
+animation: bounce 2s infinite;
+color: var(–gold);
+font-size: 0.75rem;
+text-transform: uppercase;
+letter-spacing: 3px;
+z-index: 1;
+}
+
+/* MAIN CONTENT */
+.content {
+max-width: 900px;
+margin: 0 auto;
+padding: 0 2rem 4rem;
+}
+
+/* SECTION HEADERS */
+.section-header {
+display: flex;
+align-items: center;
+gap: 1rem;
+margin: 4rem 0 2rem;
+padding-bottom: 1rem;
+border-bottom: 1px solid var(–card-border);
+}
+
+.section-icon {
+width: 48px;
+height: 48px;
+border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.5rem;
+flex-shrink: 0;
+}
+
+.section-header h2 {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.8rem;
+font-weight: 700;
+}
+
+.section-header p {
+font-size: 0.85rem;
+color: var(–text-dim);
+}
+
+/* FLIGHT CARDS */
+.flight-card {
+background: var(–card-bg);
+border: 1px solid var(–card-border);
+border-radius: 16px;
+padding: 1.5rem;
+margin-bottom: 1rem;
+position: relative;
+overflow: hidden;
+}
+
+.flight-card::before {
+content: ‘’;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 3px;
+background: linear-gradient(90deg, var(–accent), var(–gold));
+}
+
+.flight-route {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 1rem;
+}
+
+.flight-city {
+text-align: center;
+}
+
+.flight-city .code {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.8rem;
+font-weight: 900;
+color: var(–gold);
+}
+
+.flight-city .name {
+font-size: 0.8rem;
+color: var(–text-dim);
+}
+
+.flight-city .time {
+font-size: 1rem;
+font-weight: 600;
+margin-top: 0.3rem;
+}
+
+.flight-middle {
+text-align: center;
+flex: 1;
+padding: 0 1rem;
+}
+
+.flight-middle .duration {
+font-size: 0.75rem;
+color: var(–text-dim);
+margin-bottom: 0.3rem;
+}
+
+.flight-line {
+height: 2px;
+background: linear-gradient(90deg, var(–gold), var(–accent), var(–gold));
+position: relative;
+margin: 0.5rem 0;
+}
+
+.flight-line::before, .flight-line::after {
+content: ‘’;
+position: absolute;
+width: 8px;
+height: 8px;
+border-radius: 50%;
+top: -3px;
+}
+
+.flight-line::before { left: 0; background: var(–gold); }
+.flight-line::after { right: 0; background: var(–gold); }
+
+.flight-middle .stops {
+font-size: 0.7rem;
+color: var(–accent);
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.flight-details {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+gap: 0.75rem;
+padding-top: 1rem;
+border-top: 1px solid rgba(255,255,255,0.05);
+font-size: 0.8rem;
+}
+
+.flight-detail {
+display: flex;
+flex-direction: column;
+}
+
+.flight-detail label {
+font-size: 0.65rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: var(–text-dim);
+margin-bottom: 0.2rem;
+}
+
+/* TIMELINE */
+.timeline {
+position: relative;
+padding-left: 2.5rem;
+}
+
+.timeline::before {
+content: ‘’;
+position: absolute;
+left: 12px;
+top: 0;
+bottom: 0;
+width: 2px;
+background: linear-gradient(to bottom, var(–gold), var(–accent), var(–purple), var(–teal), var(–gold));
+}
+
+.day {
+position: relative;
+margin-bottom: 2rem;
+padding-bottom: 1rem;
+}
+
+.day-dot {
+position: absolute;
+left: -2.5rem;
+top: 0.3rem;
+width: 26px;
+height: 26px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 0.7rem;
+font-weight: 700;
+color: var(–darker);
+z-index: 2;
+}
+
+.day-header {
+display: flex;
+align-items: baseline;
+gap: 0.75rem;
+margin-bottom: 0.75rem;
+}
+
+.day-date {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.2rem;
+font-weight: 700;
+}
+
+.day-weekday {
+font-size: 0.75rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: var(–text-dim);
+}
+
+.day-tag {
+display: inline-block;
+padding: 0.15rem 0.6rem;
+border-radius: 20px;
+font-size: 0.65rem;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.tag-rio { background: rgba(233,69,96,0.15); color: var(–accent); }
+.tag-uberaba { background: rgba(243,156,18,0.15); color: var(–orange); }
+.tag-wedding { background: rgba(212,168,83,0.2); color: var(–gold-light); }
+.tag-vitoria { background: rgba(155,89,182,0.15); color: var(–purple); }
+.tag-alegre { background: rgba(26,188,156,0.15); color: var(–teal); }
+.tag-travel { background: rgba(52,152,219,0.15); color: var(–blue); }
+.tag-flight { background: rgba(46,204,113,0.15); color: var(–green); }
+
+.day-content {
+background: var(–card-bg);
+border: 1px solid var(–card-border);
+border-radius: 12px;
+padding: 1rem 1.25rem;
+}
+
+.day-content p {
+font-size: 0.9rem;
+line-height: 1.7;
+color: var(–text);
+}
+
+.day-content .location {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-size: 0.8rem;
+color: var(–gold);
+margin-bottom: 0.5rem;
+font-weight: 500;
+}
+
+.day-content .note {
+margin-top: 0.75rem;
+padding: 0.6rem 0.8rem;
+background: rgba(233,69,96,0.08);
+border-left: 3px solid var(–accent);
+border-radius: 0 8px 8px 0;
+font-size: 0.8rem;
+color: var(–text-dim);
+font-style: italic;
+}
+
+/* HOTEL SECTION */
+.hotel-grid {
+display: grid;
+gap: 1.5rem;
+}
+
+.hotel-card {
+background: var(–card-bg);
+border: 1px solid var(–card-border);
+border-radius: 16px;
+padding: 1.5rem;
+position: relative;
+transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.hotel-card:hover {
+transform: translateY(-2px);
+border-color: var(–gold);
+}
+
+.hotel-rank {
+position: absolute;
+top: -8px;
+right: 16px;
+background: linear-gradient(135deg, var(–gold), var(–accent));
+color: var(–darker);
+font-size: 0.65rem;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 2px;
+padding: 0.3rem 0.8rem;
+border-radius: 20px;
+}
+
+.hotel-name {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.3rem;
+font-weight: 700;
+margin-bottom: 0.3rem;
+}
+
+.hotel-location {
+font-size: 0.8rem;
+color: var(–gold);
+margin-bottom: 0.75rem;
+}
+
+.hotel-desc {
+font-size: 0.85rem;
+color: var(–text-dim);
+line-height: 1.6;
+margin-bottom: 1rem;
+}
+
+.hotel-perks {
+display: flex;
+flex-wrap: wrap;
+gap: 0.5rem;
+margin-bottom: 1rem;
+}
+
+.perk {
+display: inline-flex;
+align-items: center;
+gap: 0.3rem;
+padding: 0.25rem 0.6rem;
+background: rgba(255,255,255,0.05);
+border-radius: 20px;
+font-size: 0.75rem;
+color: var(–text);
+}
+
+.hotel-price {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top: 0.75rem;
+border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.hotel-price .price {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.4rem;
+font-weight: 700;
+color: var(–gold);
+}
+
+.hotel-price .per {
+font-size: 0.7rem;
+color: var(–text-dim);
+}
+
+.hotel-price .vibe {
+font-size: 0.75rem;
+padding: 0.3rem 0.8rem;
+border-radius: 20px;
+font-weight: 600;
+}
+
+.vibe-spender { background: rgba(233,69,96,0.15); color: var(–accent); }
+.vibe-saver { background: rgba(46,204,113,0.15); color: var(–green); }
+.vibe-balanced { background: rgba(243,156,18,0.15); color: var(–orange); }
+
+/* BOOKING INFO */
+.booking-ref {
+background: linear-gradient(135deg, rgba(212,168,83,0.1), rgba(233,69,96,0.05));
+border: 1px solid var(–card-border);
+border-radius: 16px;
+padding: 1.5rem;
+margin-top: 3rem;
+}
+
+.booking-ref h3 {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.2rem;
+margin-bottom: 1rem;
+color: var(–gold);
+}
+
+.ref-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 1rem;
+}
+
+.ref-item label {
+display: block;
+font-size: 0.65rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: var(–text-dim);
+margin-bottom: 0.2rem;
+}
+
+.ref-item span {
+font-weight: 600;
+font-size: 0.95rem;
+}
+
+.ref-item .mono {
+font-family: ‘DM Sans’, monospace;
+color: var(–gold);
+font-size: 1.1rem;
+letter-spacing: 2px;
+}
+
+/* STATUS BADGE */
+.status-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+gap: 1rem;
+margin: 2rem 0;
+}
+
+.status-item {
+background: var(–card-bg);
+border: 1px solid var(–card-border);
+border-radius: 12px;
+padding: 1rem;
+text-align: center;
+}
+
+.status-item .emoji { font-size: 1.5rem; margin-bottom: 0.3rem; }
+.status-item .label {
+font-size: 0.65rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: var(–text-dim);
+margin-bottom: 0.3rem;
+}
+.status-item .value {
+font-weight: 600;
+font-size: 0.9rem;
+}
+
+.status-booked { border-color: rgba(46,204,113,0.3); }
+.status-booked .value { color: var(–green); }
+.status-pending { border-color: rgba(243,156,18,0.3); }
+.status-pending .value { color: var(–orange); }
+.status-tbd { border-color: rgba(233,69,96,0.3); }
+.status-tbd .value { color: var(–accent); }
+
+/* FOOTER */
+.footer {
+text-align: center;
+padding: 3rem 2rem;
+border-top: 1px solid var(–card-border);
+margin-top: 4rem;
+}
+
+.footer p {
+font-size: 0.8rem;
+color: var(–text-dim);
+}
+
+.footer .tagline {
+font-family: ‘Satisfy’, cursive;
+font-size: 1.5rem;
+color: var(–gold);
+margin-bottom: 0.5rem;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+from { opacity: 0; transform: translateY(-20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+0%, 100% { transform: translateX(-50%) translateY(0); }
+50% { transform: translateX(-50%) translateY(-8px); }
+}
+
+/* BUDGET TRACKER */
+.budget-container {
+background: var(–card-bg);
+border: 1px solid var(–card-border);
+border-radius: 16px;
+padding: 1.5rem;
+overflow: hidden;
+}
+
+.budget-total {
+text-align: center;
+padding: 1.5rem 1rem;
+margin: -1.5rem -1.5rem 1.5rem;
+background: linear-gradient(135deg, rgba(212,168,83,0.1), rgba(46,204,113,0.05));
+border-bottom: 1px solid var(–card-border);
+}
+
+.budget-total-label {
+font-size: 0.7rem;
+text-transform: uppercase;
+letter-spacing: 3px;
+color: var(–text-dim);
+margin-bottom: 0.5rem;
+}
+
+.budget-total-amount {
+font-family: ‘Playfair Display’, serif;
+font-size: 2.5rem;
+font-weight: 900;
+color: var(–gold);
+line-height: 1;
+}
+
+.budget-total-sub {
+font-size: 0.7rem;
+color: var(–text-dim);
+margin-top: 0.4rem;
+}
+
+.budget-section-label {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-size: 0.7rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: var(–text-dim);
+margin-bottom: 0.75rem;
+font-weight: 600;
+}
+
+.budget-dot {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+flex-shrink: 0;
+}
+
+.budget-row {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0.75rem 0;
+border-bottom: 1px solid rgba(255,255,255,0.03);
+gap: 1rem;
+}
+
+.budget-row:last-of-type {
+border-bottom: none;
+}
+
+.budget-row.estimated {
+opacity: 0.7;
+}
+
+.budget-item-info {
+flex: 1;
+min-width: 0;
+}
+
+.budget-item-name {
+font-size: 0.9rem;
+font-weight: 500;
+}
+
+.budget-item-detail {
+font-size: 0.72rem;
+color: var(–text-dim);
+margin-top: 0.15rem;
+}
+
+.budget-item-amount {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.05rem;
+font-weight: 700;
+white-space: nowrap;
+text-align: right;
+}
+
+.budget-item-amount.confirmed { color: var(–green); }
+.budget-item-amount.estimate { color: var(–orange); }
+.budget-item-amount.free { color: var(–teal); font-family: ‘DM Sans’, sans-serif; font-size: 0.85rem; }
+
+.budget-subtotal {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0.75rem 0;
+margin-top: 0.5rem;
+border-top: 2px solid rgba(46,204,113,0.2);
+font-weight: 600;
+font-size: 0.9rem;
+}
+
+.budget-subtotal .confirmed { color: var(–green); font-family: ‘Playfair Display’, serif; font-size: 1.15rem; }
+.budget-subtotal .estimate { color: var(–orange); font-family: ‘Playfair Display’, serif; font-size: 1.15rem; }
+
+.budget-grand-total {
+margin-top: 1.5rem;
+padding: 1.5rem;
+margin: 1.5rem -1.5rem -1.5rem;
+background: linear-gradient(135deg, rgba(212,168,83,0.12), rgba(233,69,96,0.06));
+border-top: 2px solid var(–gold);
+text-align: center;
+}
+
+.budget-grand-label {
+font-size: 0.7rem;
+text-transform: uppercase;
+letter-spacing: 3px;
+color: var(–text-dim);
+margin-bottom: 0.75rem;
+}
+
+.budget-grand-range {
+display: flex;
+align-items: baseline;
+justify-content: center;
+gap: 0.75rem;
+}
+
+.budget-grand-low {
+font-family: ‘Playfair Display’, serif;
+font-size: 2rem;
+font-weight: 900;
+color: var(–green);
+}
+
+.budget-grand-sep {
+font-size: 0.8rem;
+color: var(–text-dim);
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+
+.budget-grand-high {
+font-family: ‘Playfair Display’, serif;
+font-size: 2rem;
+font-weight: 900;
+color: var(–accent);
+}
+
+.budget-grand-per {
+font-size: 0.85rem;
+color: var(–text);
+margin-top: 0.75rem;
+}
+
+.budget-grand-note {
+font-size: 0.75rem;
+color: var(–text-dim);
+margin-top: 0.5rem;
+font-style: italic;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+.hero-dates { flex-direction: column; gap: 0.5rem; align-items: center; }
+.flight-arrow { transform: rotate(90deg); }
+.flight-route { flex-direction: column; gap: 1rem; }
+.flight-middle { padding: 0; }
+.content { padding: 0 1rem 3rem; }
+.ref-grid { grid-template-columns: 1fr; }
+.status-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Wedding highlight */
+.wedding-day {
+background: linear-gradient(135deg, rgba(212,168,83,0.08), rgba(233,69,96,0.05)) !important;
+border-color: var(–gold) !important;
+}
+
+.wedding-day .day-dot {
+width: 32px;
+height: 32px;
+font-size: 1rem;
+box-shadow: 0 0 15px rgba(212,168,83,0.4);
+}
+
+/* CHOSEN ACCOMMODATION CARD */
+.chosen-card {
+background: linear-gradient(135deg, rgba(212,168,83,0.08), rgba(46,204,113,0.05));
+border: 2px solid rgba(46,204,113,0.3);
+border-radius: 16px;
+padding: 1.75rem;
+position: relative;
+overflow: hidden;
+}
+
+.chosen-card::before {
+content: ‘’;
+position: absolute;
+top: 0; left: 0; right: 0;
+height: 3px;
+background: linear-gradient(90deg, var(–green), var(–gold), var(–green));
+}
+
+.chosen-badge {
+display: inline-flex;
+align-items: center;
+gap: 0.4rem;
+background: linear-gradient(135deg, var(–green), #1a9e56);
+color: white;
+font-size: 0.65rem;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 2px;
+padding: 0.35rem 1rem;
+border-radius: 20px;
+margin-bottom: 1rem;
+}
+
+.chosen-title {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.5rem;
+font-weight: 700;
+margin-bottom: 0.25rem;
+}
+
+.chosen-subtitle {
+font-size: 0.85rem;
+color: var(–gold);
+margin-bottom: 1rem;
+}
+
+.chosen-stats {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+gap: 0.75rem;
+margin-bottom: 1.25rem;
+}
+
+.chosen-stat {
+background: rgba(255,255,255,0.04);
+border-radius: 10px;
+padding: 0.75rem;
+text-align: center;
+}
+
+.chosen-stat .stat-value {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.1rem;
+font-weight: 700;
+color: var(–gold);
+}
+
+.chosen-stat .stat-label {
+font-size: 0.6rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: var(–text-dim);
+margin-top: 0.15rem;
+}
+
+.chosen-highlights {
+display: flex;
+flex-wrap: wrap;
+gap: 0.5rem;
+margin-bottom: 1.25rem;
+}
+
+.highlight-tag {
+display: inline-flex;
+align-items: center;
+gap: 0.3rem;
+padding: 0.3rem 0.75rem;
+background: rgba(46,204,113,0.1);
+border: 1px solid rgba(46,204,113,0.2);
+border-radius: 20px;
+font-size: 0.75rem;
+color: var(–green);
+font-weight: 500;
+}
+
+.chosen-desc {
+font-size: 0.88rem;
+color: var(–text-dim);
+line-height: 1.7;
+margin-bottom: 1rem;
+}
+
+.chosen-link {
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+color: var(–gold);
+font-size: 0.85rem;
+font-weight: 600;
+text-decoration: none;
+padding: 0.5rem 1rem;
+background: rgba(212,168,83,0.1);
+border: 1px solid rgba(212,168,83,0.2);
+border-radius: 10px;
+transition: all 0.3s ease;
+}
+
+.chosen-link:hover {
+background: rgba(212,168,83,0.2);
+border-color: var(–gold);
+}
+
+/* COLLAPSIBLE ALTERNATIVES */
+.alternatives-toggle {
+width: 100%;
+background: var(–card-bg);
+border: 1px solid var(–card-border);
+border-radius: 12px;
+padding: 1rem 1.25rem;
+margin-top: 1.5rem;
+color: var(–text-dim);
+font-family: ‘DM Sans’, sans-serif;
+font-size: 0.85rem;
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+align-items: center;
+transition: all 0.3s ease;
+}
+
+.alternatives-toggle:hover {
+border-color: var(–gold);
+color: var(–text);
+}
+
+.alternatives-toggle .toggle-arrow {
+transition: transform 0.3s ease;
+font-size: 0.75rem;
+}
+
+.alternatives-content {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.5s ease;
+}
+
+.alternatives-content.open {
+max-height: 5000px;
+}
+
+.alt-card {
+background: var(–card-bg);
+border: 1px solid var(–card-border);
+border-radius: 12px;
+padding: 1.25rem;
+margin-top: 0.75rem;
+position: relative;
+}
+
+.alt-card .alt-header {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+margin-bottom: 0.5rem;
+}
+
+.alt-card .alt-name {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.1rem;
+font-weight: 700;
+}
+
+.alt-card .alt-price {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.1rem;
+font-weight: 700;
+color: var(–gold);
+white-space: nowrap;
+}
+
+.alt-card .alt-location {
+font-size: 0.75rem;
+color: var(–gold);
+margin-bottom: 0.5rem;
+}
+
+.alt-card .alt-meta {
+font-size: 0.75rem;
+color: var(–text-dim);
+margin-bottom: 0.5rem;
+}
+
+.alt-card .alt-desc {
+font-size: 0.8rem;
+color: var(–text-dim);
+line-height: 1.6;
+margin-bottom: 0.75rem;
+}
+
+.alt-card .alt-perks {
+display: flex;
+flex-wrap: wrap;
+gap: 0.4rem;
+margin-bottom: 0.75rem;
+}
+
+.alt-card .alt-perk {
+font-size: 0.65rem;
+padding: 0.2rem 0.5rem;
+background: rgba(255,255,255,0.04);
+border-radius: 15px;
+color: var(–text);
+}
+
+.alt-card .alt-flags {
+display: flex;
+gap: 0.4rem;
+flex-wrap: wrap;
+}
+
+.alt-flag {
+font-size: 0.6rem;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1px;
+padding: 0.2rem 0.5rem;
+border-radius: 10px;
+}
+
+.flag-good { background: rgba(46,204,113,0.12); color: var(–green); }
+.flag-ok { background: rgba(243,156,18,0.12); color: var(–orange); }
+.flag-bad { background: rgba(233,69,96,0.12); color: var(–accent); }
+
+.alt-divider {
+font-size: 0.7rem;
+text-transform: uppercase;
+letter-spacing: 3px;
+color: var(–text-dim);
+text-align: center;
+margin: 1.5rem 0 0.5rem;
+opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+.chosen-stats { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+
+</head>
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="hero-pre">Mission Briefing — Classified</div>
+  <h1>
+    Victor <span class="amp">&</span> Andinho<br>
+    <span class="gold">Brazil Takeover</span>
+  </h1>
+  <p class="hero-sub">
+    Wedding. Beach. Chaos. Repeat.<br>
+    July 15–29, 2026 — Vienna → Rio → Everywhere → Vienna
+  </p>
+  <div class="hero-dates">
+    <div class="hero-date">
+      <small>Departure</small>
+      <span>VIE · Jul 15</span>
+    </div>
+    <div class="flight-arrow">✈</div>
+    <div class="hero-date">
+      <small>Arrival</small>
+      <span>GIG · Jul 16</span>
+    </div>
+  </div>
+  <div class="scroll-hint">↓ Scroll for the tea ↓</div>
+</section>
+
+<!-- MAIN -->
+
+<main class="content">
+
+  <!-- STATUS OVERVIEW -->
+
+  <div class="status-grid">
+    <div class="status-item status-booked">
+      <div class="emoji">✈️</div>
+      <div class="label">Flights</div>
+      <div class="value">Booked</div>
+    </div>
+    <div class="status-item status-booked">
+      <div class="emoji">🏠</div>
+      <div class="label">Rio Stay</div>
+      <div class="value">Bossa 107 🏊</div>
+    </div>
+    <div class="status-item status-tbd">
+      <div class="emoji">🚌</div>
+      <div class="label">Internal Travel</div>
+      <div class="value">TBD</div>
+    </div>
+    <div class="status-item status-booked">
+      <div class="emoji">💒</div>
+      <div class="label">Wedding</div>
+      <div class="value">Jul 25 · Ubu</div>
+    </div>
+    <div class="status-item status-booked">
+      <div class="emoji">🏠</div>
+      <div class="label">Uberaba Stay</div>
+      <div class="value">Family 🏡</div>
+    </div>
+    <div class="status-item status-pending">
+      <div class="emoji">🌃</div>
+      <div class="label">Vitória Stay</div>
+      <div class="value">Reviewing</div>
+    </div>
+  </div>
+
+  <!-- FLIGHTS -->
+
+  <div class="section-header">
+    <div class="section-icon" style="background: rgba(233,69,96,0.15);">✈️</div>
+    <div>
+      <h2>The Flights</h2>
+      <p>Vienna ↔ Rio · Austrian Airlines · Booking: 9ZUKM8</p>
+    </div>
+  </div>
+
+  <!-- OUTBOUND -->
+
+  <div class="flight-card">
+    <div class="flight-route">
+      <div class="flight-city">
+        <div class="code">VIE</div>
+        <div class="name">Vienna</div>
+        <div class="time">06:35</div>
+      </div>
+      <div class="flight-middle">
+        <div class="duration">27h 20m total</div>
+        <div class="flight-line"></div>
+        <div class="stops">1 stop · Rome Fiumicino (13h 45m layover)</div>
+      </div>
+      <div class="flight-city">
+        <div class="code">GIG</div>
+        <div class="name">Rio de Janeiro</div>
+        <div class="time">04:55 <small style="color:var(--accent)">+1</small></div>
+      </div>
+    </div>
+    <div class="flight-details">
+      <div class="flight-detail">
+        <label>Date</label>
+        <span>15 Jul → 16 Jul 2026</span>
+      </div>
+      <div class="flight-detail">
+        <label>Leg 1</label>
+        <span>OS551 · Austrian · A320neo</span>
+      </div>
+      <div class="flight-detail">
+        <label>Leg 2</label>
+        <span>OS6697 · ITA Airways · A330</span>
+      </div>
+      <div class="flight-detail">
+        <label>Baggage</label>
+        <span>1× carry-on (8kg) + 1× checked (23kg) each</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RETURN -->
+
+  <div class="flight-card">
+    <div class="flight-route">
+      <div class="flight-city">
+        <div class="code">GIG</div>
+        <div class="name">Rio de Janeiro</div>
+        <div class="time">16:15</div>
+      </div>
+      <div class="flight-middle">
+        <div class="duration">14h 30m total</div>
+        <div class="flight-line"></div>
+        <div class="stops">1 stop · Frankfurt (1h 45m layover)</div>
+      </div>
+      <div class="flight-city">
+        <div class="code">VIE</div>
+        <div class="name">Vienna</div>
+        <div class="time">11:45 <small style="color:var(--accent)">+1</small></div>
+      </div>
+    </div>
+    <div class="flight-details">
+      <div class="flight-detail">
+        <label>Date</label>
+        <span>28 Jul → 29 Jul 2026</span>
+      </div>
+      <div class="flight-detail">
+        <label>Leg 1</label>
+        <span>LH501 · Lufthansa · B787-9</span>
+      </div>
+      <div class="flight-detail">
+        <label>Leg 2</label>
+        <span>LH6328 · Austrian · A321</span>
+      </div>
+      <div class="flight-detail">
+        <label>Price (both)</label>
+        <span style="color:var(--gold);">€1,783.96 total</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOKING REF -->
+
+  <div class="booking-ref">
+    <h3>📋 Booking Details</h3>
+    <div class="ref-grid">
+      <div class="ref-item">
+        <label>Booking Code</label>
+        <span class="mono">9ZUKM8</span>
+      </div>
+      <div class="ref-item">
+        <label>Victor's Ticket</label>
+        <span class="mono">257-2170834809</span>
+      </div>
+      <div class="ref-item">
+        <label>Andinho's Ticket</label>
+        <span class="mono">257-2170834810</span>
+      </div>
+      <div class="ref-item">
+        <label>Total Price</label>
+        <span style="color:var(--gold);">€1,783.96</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ITINERARY -->
+
+  <div class="section-header">
+    <div class="section-icon" style="background: rgba(212,168,83,0.15);">📅</div>
+    <div>
+      <h2>The Master Plan</h2>
+      <p>13 days of pure Brazilian magic, baby</p>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+```
+<!-- Day 0: Travel -->
+<div class="day">
+  <div class="day-dot" style="background: var(--blue);">✈</div>
+  <div class="day-header">
+    <span class="day-date">Jul 15 – 16</span>
+    <span class="day-weekday">Tue → Wed</span>
+    <span class="day-tag tag-flight">Transit</span>
+  </div>
+  <div class="day-content">
+    <div class="location">📍 Vienna → Rome → Rio de Janeiro</div>
+    <p>
+      Rise and shine at an ungodly hour, queens. VIE at 06:35, which means you're setting alarms at like 4 AM. Quick hop to Rome, then a luxurious 13h 45m layover in Fiumicino (grab some pasta, live la dolce vita). Evening flight to Rio, landing at 04:55 on the 16th.
+    </p>
+    <div class="note">⚠️ You land at GIG (Galeão) at nearly 5 AM. Early check-in at the hotel would be clutch. Ask when booking!</div>
+  </div>
+</div>
+
+<!-- Rio Days -->
+<div class="day">
+  <div class="day-dot" style="background: var(--accent);">1</div>
+  <div class="day-header">
+    <span class="day-date">Jul 16</span>
+    <span class="day-weekday">Wednesday</span>
+    <span class="day-tag tag-rio">Rio de Janeiro</span>
+  </div>
+  <div class="day-content">
+    <div class="location">📍 Rio de Janeiro — Arrival Day</div>
+    <p>
+      You just survived 27+ hours of travel. Check into the hotel, nap like the fabulous disasters you are, then ease into Rio. Maybe a sunset caipirinha at the beach? Keep it chill. Tomorrow the real action starts.
+    </p>
+  </div>
+</div>
+
+<div class="day">
+  <div class="day-dot" style="background: var(--accent);">2</div>
+  <div class="day-header">
+    <span class="day-date">Jul 17</span>
+    <span class="day-weekday">Thursday</span>
+    <span class="day-tag tag-rio">Rio de Janeiro</span>
+  </div>
+  <div class="day-content">
+    <div class="location">📍 Rio de Janeiro — Full Day</div>
+    <p>
+      First full day in the Cidade Maravilhosa! Cristo Redentor, Pão de Açúcar, Lapa at night… you know the drill. Live. It. Up.
+    </p>
+  </div>
+</div>
+
+<div class="day">
+  <div class="day-dot" style="background: var(--orange);">3</div>
+  <div class="day-header">
+    <span class="day-date">Jul 18</span>
+    <span class="day-weekday">Saturday</span>
+    <span class="day-tag tag-travel">Travel Day</span>
+    <span class="day-tag tag-uberaba">→ Uberaba</span>
+  </div>
+  <div class="day-content">
+    <div class="location">📍 Rio de Janeiro → Uberaba, MG</div>
+    <p>
+      Checkout from Bossa 107 by 11AM, then fly to Minas Gerais! Domestic flight from Rio (SDU or GIG) to Uberaba (UBA) — or fly to Uberlândia and drive. More time with the family = more pão de queijo. Win-win.
+    </p>
+    <div class="note">✏️ Domestic flights TBD — book these soon! GOL, LATAM, or Azul usually service this route.</div>
+  </div>
+</div>
+
+<div class="day">
+  <div class="day-dot" style="background: var(--orange);">4</div>
+  <div class="day-header">
+    <span class="day-date">Jul 19</span>
+    <span class="day-weekday">Sunday</span>
+    <span class="day-tag tag-uberaba">Uberaba</span>
+  </div>
+  <div class="day-content">
+    <div class="location">📍 Uberaba, Minas Gerais — Victor's Family 🏡</div>
+    <p>First full day in Uberaba! Family time, mineiro food, catching up with everyone. The good stuff.</p>
+  </div>
+</div>
+
+<div class="day">
+  <div class="day-dot" style="background: var(--orange);">5</div>
+  <div class="day-header">
+    <span class="day-date">Jul 20</span>
+    <span class="day-weekday">Monday</span>
+    <span class="day-tag tag-uberaba">Uberaba</span>
+  </div>
+  <div class="day-content">
+    <div class="location">📍 Uberaba, Minas Gerais</div>
+    <p>More family love. Eat another 47 pães de queijo. No judgment here.</p>
+  </div>
+</div>
+
+<div class="day">
+  <div class="day-dot" style="background: var(--orange);">6</div>
+  <div class="day-header">
+    <span class="day-date">Jul 21</span>
+    <span class="day-weekday">Tuesday</span>
+    <span class="day-tag tag-uberaba">Uberaba</span>
+  </div>
+  <div class="day-content">
+    <div class="location">📍 Uberaba, Minas Gerais</div>
+    <p>Minas magic continues. Feijão tropeiro, queijo canastra, maybe a churrasco with the fam? Living your best Brazilian life.</p>
+  </div>
+</div>
+
+<div class="day">
+  <div class="day-dot" style="background: var(--orange);">7</div>
+  <div class="day-header">
+    <span class="day-date">Jul 22</span>
+    <span class="day-weekday">Wednesday</span>
+    <span class="day-tag tag-uberaba">Uberaba</span>
+    <span class="day-tag tag-travel">→ ES</span>
+  </div>
+  <div class="day-content">
+    <div class="location">📍 Uberaba → Espírito Santo region</div>
+    <p>
+      Last day in Uberaba, then head toward Espírito Santo to start getting into wedding mode. Travel logistics TBD — likely a flight to Vitória or bus.
+    </p>
+    <div class="note">✏️ Need to figure out the Uberaba → Ubu/ES transport. Fly to Vitória then drive ~2h south to Ubu?</div>
+  </div>
+</div>
+
+<div class="day">
+  <div class="day-dot" style="background: var(--gold);">8</div>
+  <div class="day-header">
+    <span class="day-date">Jul 23</span>
+    <span class="day-weekday">Wednesday</span>
+    <span class="day-tag tag-wedding">Pre-Wedding</span>
+  </div>
+  <div class="day-content">
+    <div class="location">📍 Anchieta / Ubu, Espírito Santo</div>
+    <p>
+      Settle into the wedding zone. Pre-wedding festivities? Get those outfits steamed, get those eyebrows done. Emanuelle's big day is almost here!
+    </p>
+  </div>
+</div>
+
+<div class="day">
+  <div class="day-dot" style="background: var(--gold);">9</div>
+  <div class="day-header">
+    <span class="day-date">Jul 24</span>
+    <span class="day-weekday">Thursday</span>
+    <span class="day-tag tag-wedding">Pre-Wedding</span>
+  </div>
+  <div class="day-content">
+    <div class="location">📍 Ubu, Espírito Santo</div>
+    <p>
+      Eve of the wedding. Rehearsal dinner vibes? Whatever Emanuelle has planned, you're there looking stunning. Rest up — tomorrow is THE day.
+    </p>
+  </div>
+</div>
+
+<!-- WEDDING DAY -->
+<div class="day wedding-day">
+  <div class="day-dot" style="background: linear-gradient(135deg, var(--gold), var(--accent));">💒</div>
+  <div class="day-header">
+    <span class="day-date">Jul 25</span>
+    <span class="day-weekday">Friday</span>
+    <span class="day-tag tag-wedding" style="background: rgba(212,168,83,0.3);">👰 WEDDING DAY</span>
+  </div>
+  <div class="day-content wedding-day">
+    <div class="location">📍 Ubu, Espírito Santo — Emanuelle's Wedding! 💍</div>
+    <p>
+      THIS IS IT. The main event. Wanderson's sister Emanuelle ties the knot! Cry happy tears, dance until your feet hurt, eat everything in sight, and be the most stunning couple at the reception (after the bride, obviously). Slay, darlings. SLAY.
+    </p>
+  </div>
+</div>
+
+<div class="day">
+  <div class="day-dot" style="background: var(--purple);">10</div>
+  <div class="day-header">
+    <span class="day-date">Jul 26</span>
+    <span class="day-weekday">Saturday</span>
+    <span class="day-tag tag-wedding">Post-Wedding</span>
+    <span class="day-tag tag-vitoria">→ Vitória</span>
+  </div>
+  <div class="day-content">
+    <div class="location">📍 Ubu → Vitória, ES</div>
+    <p>
+      Recover from last night's dancing (we know you went HARD). Then head north to Vitória (~2h drive). Check in, explore the capital of Espírito Santo. One night to soak it in.
+    </p>
+  </div>
+</div>
+
+<div class="day">
+  <div class="day-dot" style="background: var(--teal);">11</div>
+  <div class="day-header">
+    <span class="day-date">Jul 27</span>
+    <span class="day-weekday">Sunday</span>
+    <span class="day-tag tag-vitoria">Vitória</span>
+    <span class="day-tag tag-alegre">→ Alegre</span>
+  </div>
+  <div class="day-content">
+    <div class="location">📍 Vitória → Alegre, ES</div>
+    <p>
+      Morning in Vitória, then drive south to Alegre (~3h). Check in for your one night stay. Enjoy the small-town Espírito Santo charm.
+    </p>
+  </div>
+</div>
+
+<div class="day">
+  <div class="day-dot" style="background: var(--blue);">12</div>
+  <div class="day-header">
+    <span class="day-date">Jul 27–28</span>
+    <span class="day-weekday">Sunday Night → Monday</span>
+    <span class="day-tag tag-alegre">Alegre</span>
+    <span class="day-tag tag-travel">🚌 Overnight Bus</span>
+  </div>
+  <div class="day-content">
+    <div class="location">📍 Alegre → Overnight Bus → Rio de Janeiro</div>
+    <p>
+      Monday morning or late Sunday night, hop on the overnight bus back to Rio. You need to be at GIG by ~13:00-14:00 for your 16:15 flight. Time it right!
+    </p>
+    <div class="note">⚠️ CRITICAL: Your flight departs GIG at 16:15. Make sure the overnight bus arrives with PLENTY of buffer time. Consider leaving Sunday evening for safety.</div>
+  </div>
+</div>
+
+<div class="day">
+  <div class="day-dot" style="background: var(--green);">✈</div>
+  <div class="day-header">
+    <span class="day-date">Jul 28–29</span>
+    <span class="day-weekday">Monday → Tuesday</span>
+    <span class="day-tag tag-flight">Homebound</span>
+  </div>
+  <div class="day-content">
+    <div class="location">📍 Rio de Janeiro → Frankfurt → Vienna</div>
+    <p>
+      GIG at 16:15, through Frankfurt, land in Vienna at 11:45 on the 29th. Back to reality — but with suntans, wedding memories, and at least 3 kilos heavier from all that Brazilian food. Worth it? ABSOLUTELY.
+    </p>
+  </div>
+</div>
+```
+
+  </div>
+
+  <!-- RIO ACCOMMODATION -->
+
+  <div class="section-header">
+    <div class="section-icon" style="background: rgba(46,204,113,0.15);">🏠</div>
+    <div>
+      <h2>Rio Accommodation — Sorted!</h2>
+      <p>The one with the pool won. Obviously. 🏊</p>
+    </div>
+  </div>
+
+  <!-- CHOSEN: Bossa 107 -->
+
+  <div class="chosen-card">
+    <div class="chosen-badge">✅ CHOSEN · Jul 16–18</div>
+    <div class="chosen-title">Bossa 107 — Ipanema Loft</div>
+    <div class="chosen-subtitle">📍 Ipanema · Steps from beach & subway · Hosted by Pedro</div>
+
+```
+<div class="chosen-stats">
+  <div class="chosen-stat">
+    <div class="stat-value">€247</div>
+    <div class="stat-label">Total (2 nights)</div>
+  </div>
+  <div class="chosen-stat">
+    <div class="stat-value">€123.50</div>
+    <div class="stat-label">Per Night</div>
+  </div>
+  <div class="chosen-stat">
+    <div class="stat-value">4.9 ⭐</div>
+    <div class="stat-label">Rating (10 reviews)</div>
+  </div>
+  <div class="chosen-stat">
+    <div class="stat-value">4 max</div>
+    <div class="stat-label">Guests Allowed</div>
+  </div>
+</div>
+
+<div class="chosen-highlights">
+  <span class="highlight-tag">🏊 Rooftop Pool</span>
+  <span class="highlight-tag">🛋️ Lounge Area</span>
+  <span class="highlight-tag">🍳 Gourmet Space</span>
+  <span class="highlight-tag">🅿️ Free Parking</span>
+  <span class="highlight-tag">🔒 24h Security</span>
+  <span class="highlight-tag">👥 4 Guests Max</span>
+  <span class="highlight-tag">🍺 Beers in Fridge</span>
+  <span class="highlight-tag">🏖️ Beach Chairs Provided</span>
+  <span class="highlight-tag">🧺 Washer</span>
+  <span class="highlight-tag">❄️ AC</span>
+</div>
+
+<div class="chosen-desc">
+  The ONLY Airbnb you found with a pool — and it's a <strong style="color:var(--green)">rooftop pool</strong> in a brand new building in the heart of Ipanema. Host Pedro (and his brother Lucas) are absolute legends who leave cold beers and sodas in the fridge as a welcome gift. The building (Bossa 107) has gourmet space, a lounge, laundry, and 24-hour security. Reviews rave about the hospitality, the warm pool, and even beach chairs/cooler provided for your beach days. Victor gets his pool. Andinho, it's still cheaper than any hotel with a pool. Everybody wins. 💅
+</div>
+
+<div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;">
+  <a href="https://www.airbnb.com/rooms/1518295469633980775?check_in=2026-07-16&check_out=2026-07-18" target="_blank" class="chosen-link">🔗 View on Airbnb</a>
+  <span style="font-size: 0.75rem; color: var(--green);">Free cancellation before July 11</span>
+</div>
+```
+
+  </div>
+
+  <!-- ALTERNATIVES TOGGLE -->
+
+  <button class="alternatives-toggle" onclick="toggleAlternatives('rio')">
+    <span>📋 View 8 other options we compared (5 Airbnbs + 3 Hotels)</span>
+    <span class="toggle-arrow" id="rio-arrow">▼</span>
+  </button>
+
+  <div class="alternatives-content" id="rio-alternatives">
+
+```
+<div class="alt-divider">— Airbnb Alternatives —</div>
+
+<!-- Alt 1: Ipanema Loft Maracujá -->
+<div class="alt-card">
+  <div class="alt-header">
+    <div>
+      <div class="alt-name">Ipanema Loft "Maracujá"</div>
+      <div class="alt-location">📍 Ipanema · Near General Osório metro · by Marie</div>
+    </div>
+    <div class="alt-price">€204</div>
+  </div>
+  <div class="alt-meta">⭐ 5.0 (68 reviews) · 2 guests · 1 bed (queen) · Superhost 11 years</div>
+  <div class="alt-desc">Perfect score, gorgeous interior, excellent location. Kitchen, 400Mbps wifi, Netflix, washer/dryer, self check-in via keypad. 3-min walk to Ipanema beach. Check-in 3PM–10PM.</div>
+  <div class="alt-perks">
+    <span class="alt-perk">🍳 Kitchen</span>
+    <span class="alt-perk">📶 400Mbps WiFi</span>
+    <span class="alt-perk">🧺 Washer/Dryer</span>
+    <span class="alt-perk">❄️ AC</span>
+    <span class="alt-perk">📺 Netflix</span>
+  </div>
+  <div class="alt-flags">
+    <span class="alt-flag flag-good">Best Reviewed</span>
+    <span class="alt-flag flag-bad">No Pool</span>
+    <span class="alt-flag flag-bad">2 Guest Max</span>
+  </div>
+</div>
+
+<!-- Alt 2: Boutique Apt Posto 6 -->
+<div class="alt-card">
+  <div class="alt-header">
+    <div>
+      <div class="alt-name">Boutique Apartment Posto 6</div>
+      <div class="alt-location">📍 Copacabana Posto 6 · by Dmitry</div>
+    </div>
+    <div class="alt-price">€222</div>
+  </div>
+  <div class="alt-meta">⭐ 4.83 (113 reviews) · 4 guests · 2 beds · Superhost 3 years</div>
+  <div class="alt-desc">Brand new renovation, mountain & city skyline views, 2 min from beach. Between Ipanema & Copacabana. Self check-in (smartlock), free street parking, elevator. Checkout 10AM.</div>
+  <div class="alt-perks">
+    <span class="alt-perk">🏔️ Mountain View</span>
+    <span class="alt-perk">🌃 City Views</span>
+    <span class="alt-perk">🏖️ Beach Access</span>
+    <span class="alt-perk">🅿️ Free Parking</span>
+    <span class="alt-perk">🛗 Elevator</span>
+  </div>
+  <div class="alt-flags">
+    <span class="alt-flag flag-good">4 Guest Max</span>
+    <span class="alt-flag flag-bad">No Pool</span>
+    <span class="alt-flag flag-ok">Checkout 10AM</span>
+  </div>
+</div>
+
+<!-- Alt 3: Design Loft Posto 8 -->
+<div class="alt-card">
+  <div class="alt-header">
+    <div>
+      <div class="alt-name">Design Loft — Posto 8</div>
+      <div class="alt-location">📍 Ipanema · 150m from Posto 8 · by Andrey</div>
+    </div>
+    <div class="alt-price">€236</div>
+  </div>
+  <div class="alt-meta">⭐ 4.92 (12 reviews) · 3 guests · 2 beds · 4 months hosting</div>
+  <div class="alt-desc">Interior designer's masterpiece. 100m from Hotel Fasano. Sunset views from window. Reviews call it "the bar all Airbnbs will be compared to." No elevator — stairs to top floor. No smoke/CO alarm.</div>
+  <div class="alt-perks">
+    <span class="alt-perk">🎨 Designer Interior</span>
+    <span class="alt-perk">🌅 Sunset View</span>
+    <span class="alt-perk">❄️ AC + Fan</span>
+    <span class="alt-perk">🍳 Kitchen</span>
+  </div>
+  <div class="alt-flags">
+    <span class="alt-flag flag-good">Stunning Design</span>
+    <span class="alt-flag flag-bad">No Pool</span>
+    <span class="alt-flag flag-ok">3 Guest Max</span>
+    <span class="alt-flag flag-ok">No Elevator</span>
+  </div>
+</div>
+
+<!-- Alt 4: Studio Design Ipanema -->
+<div class="alt-card">
+  <div class="alt-header">
+    <div>
+      <div class="alt-name">Studio Design Ipanema</div>
+      <div class="alt-location">📍 Ipanema · 600m from Posto 9 · by Roberta</div>
+    </div>
+    <div class="alt-price">€191</div>
+  </div>
+  <div class="alt-meta">⭐ 4.95 (313 reviews) · 4 guests · 3 beds · Superhost 9 years</div>
+  <div class="alt-desc">People's champion — cheapest AND most reviewed (313!). 25m² studio, charming old building. Near Lagoa & NS da Paz metro. Balcony, shared backyard. Interior designer host. Extra guest fee from 2nd guest — check final price! No elevator, 2nd floor.</div>
+  <div class="alt-perks">
+    <span class="alt-perk">🍳 Kitchen</span>
+    <span class="alt-perk">📶 329Mbps WiFi</span>
+    <span class="alt-perk">📺 Netflix</span>
+    <span class="alt-perk">🌿 Balcony</span>
+    <span class="alt-perk">🏖️ Beach Access</span>
+  </div>
+  <div class="alt-flags">
+    <span class="alt-flag flag-good">Cheapest</span>
+    <span class="alt-flag flag-good">Most Reviews</span>
+    <span class="alt-flag flag-good">4 Guest Max</span>
+    <span class="alt-flag flag-bad">No Pool</span>
+    <span class="alt-flag flag-ok">25m² (Tiny)</span>
+  </div>
+</div>
+
+<!-- Alt 5: Modern Loft Ipanema -->
+<div class="alt-card">
+  <div class="alt-header">
+    <div>
+      <div class="alt-name">Modern Loft Ipanema</div>
+      <div class="alt-location">📍 Ipanema · 3 min from beach · by Elisa</div>
+    </div>
+    <div class="alt-price">€161</div>
+  </div>
+  <div class="alt-meta">⭐ 4.9 (214 reviews) · 2 guests · 1 bed · Superhost 4 years</div>
+  <div class="alt-desc">Bargain pick at €80.50/night (on sale!). Elevator, washer, air fryer, 24h doorman. Good reviews but mixed feedback on AC performance and mold in bathroom. Construction noted for 2025 — may or may not continue in 2026.</div>
+  <div class="alt-perks">
+    <span class="alt-perk">🛗 Elevator</span>
+    <span class="alt-perk">🧺 Washer</span>
+    <span class="alt-perk">🍳 Full Kitchen</span>
+    <span class="alt-perk">🅿️ Free Parking</span>
+  </div>
+  <div class="alt-flags">
+    <span class="alt-flag flag-good">Cheapest Per Night</span>
+    <span class="alt-flag flag-bad">No Pool</span>
+    <span class="alt-flag flag-bad">2 Guest Max</span>
+    <span class="alt-flag flag-ok">AC Issues Reported</span>
+  </div>
+</div>
+
+<div class="alt-divider">— Hotel Alternatives —</div>
+
+<!-- Hotel 1: Yoo2 -->
+<div class="alt-card">
+  <div class="alt-header">
+    <div>
+      <div class="alt-name">Yoo2 Rio de Janeiro</div>
+      <div class="alt-location">📍 Botafogo · Tapestry Collection by Hilton</div>
+    </div>
+    <div class="alt-price">~€130–160/n</div>
+  </div>
+  <div class="alt-meta">5-star design hotel · Rooftop pool · Sugarloaf views</div>
+  <div class="alt-desc">Design-forward with rooftop pool overlooking Sugarloaf & Christ. Nightclub, spa, DJ sets, free bikes, great breakfast. Compact rooms but stunning amenities.</div>
+  <div class="alt-perks">
+    <span class="alt-perk">🏊 Rooftop Pool</span>
+    <span class="alt-perk">🎵 Nightclub</span>
+    <span class="alt-perk">💆 Spa</span>
+    <span class="alt-perk">🚲 Free Bikes</span>
+    <span class="alt-perk">🍳 Breakfast</span>
+  </div>
+  <div class="alt-flags">
+    <span class="alt-flag flag-good">Pool + Views</span>
+    <span class="alt-flag flag-ok">€390–480 for 3 nights</span>
+  </div>
+</div>
+
+<!-- Hotel 2: PortoBay -->
+<div class="alt-card">
+  <div class="alt-header">
+    <div>
+      <div class="alt-name">PortoBay Rio de Janeiro</div>
+      <div class="alt-location">📍 Copacabana · Beachfront on Av. Atlântica</div>
+    </div>
+    <div class="alt-price">~€160–220/n</div>
+  </div>
+  <div class="alt-meta">9.2 rating · 20th-floor rooftop pool · Private beach area</div>
+  <div class="alt-desc">Right on Copacabana Beach. Portuguese-Brazilian hospitality, La Finestra restaurant, Bossa Nova bar, spa/sauna. Victor's dream hotel.</div>
+  <div class="alt-perks">
+    <span class="alt-perk">🏊 20th Floor Pool</span>
+    <span class="alt-perk">🏖️ Beachfront</span>
+    <span class="alt-perk">🍽️ Restaurant</span>
+    <span class="alt-perk">💆 Spa</span>
+  </div>
+  <div class="alt-flags">
+    <span class="alt-flag flag-good">Victor's Dream 💅</span>
+    <span class="alt-flag flag-bad">€480–660 for 3 nights</span>
+  </div>
+</div>
+
+<!-- Hotel 3: Premier Copa -->
+<div class="alt-card">
+  <div class="alt-header">
+    <div>
+      <div class="alt-name">Premier Copacabana Hotel</div>
+      <div class="alt-location">📍 Copacabana · Next to Siqueira Campos Metro</div>
+    </div>
+    <div class="alt-price">~€75–120/n</div>
+  </div>
+  <div class="alt-meta">Rooftop pool · Metro at door · Budget-friendly</div>
+  <div class="alt-desc">Budget king with rooftop pool showing Christ the Redeemer. 5-min walk to beach, metro right there. Clean and comfortable, nothing fancy but gets the job done.</div>
+  <div class="alt-perks">
+    <span class="alt-perk">🏊 Rooftop Pool</span>
+    <span class="alt-perk">🚇 Metro Adjacent</span>
+    <span class="alt-perk">🍳 Breakfast</span>
+    <span class="alt-perk">🏖️ Near Beach</span>
+  </div>
+  <div class="alt-flags">
+    <span class="alt-flag flag-good">Andinho Approved 💰</span>
+    <span class="alt-flag flag-ok">€225–360 for 3 nights</span>
+  </div>
+</div>
+```
+
+  </div>
+
+  <script>
+  function toggleAlternatives(id) {
+    const content = document.getElementById(id + '-alternatives');
+    const arrow = document.getElementById(id + '-arrow');
+    content.classList.toggle('open');
+    arrow.style.transform = content.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0)';
+  }
+  </script>
+
+  <!-- BUDGET OVERVIEW -->
+
+  <div class="section-header">
+    <div class="section-icon" style="background: rgba(46,204,113,0.15);">💰</div>
+    <div>
+      <h2>Budget Tracker</h2>
+      <p>Where the money's going, honeys. Victor, look away. Andinho, breathe.</p>
+    </div>
+  </div>
+
+  <div class="budget-container">
+    <!-- TOTAL BANNER -->
+    <div class="budget-total">
+      <div class="budget-total-label">Total Trip Cost (so far)</div>
+      <div class="budget-total-amount" id="budget-total">€2,143.96</div>
+      <div class="budget-total-sub">confirmed costs only · per couple · estimates below</div>
+    </div>
+
+```
+<!-- CONFIRMED COSTS -->
+<div class="budget-section-label">
+  <span class="budget-dot" style="background: var(--green);"></span>
+  Confirmed & Booked
+</div>
+
+<div class="budget-row">
+  <div class="budget-item-info">
+    <div class="budget-item-name">✈️ Flights Vienna ↔ Rio</div>
+    <div class="budget-item-detail">Austrian Airlines · Booking 9ZUKM8 · Both passengers</div>
+  </div>
+  <div class="budget-item-amount confirmed">€1,783.96</div>
+</div>
+
+<div class="budget-row">
+  <div class="budget-item-info">
+    <div class="budget-item-name">🏠 Rio Airbnb — Bossa 107</div>
+    <div class="budget-item-detail">Ipanema · 2 nights (Jul 16–18) · Pool, 24h security</div>
+  </div>
+  <div class="budget-item-amount confirmed">€247.00</div>
+</div>
+
+<div class="budget-row">
+  <div class="budget-item-info">
+    <div class="budget-item-name">🏠 Vitória Apt — Mar Esperanza</div>
+    <div class="budget-item-detail">Sea view · 1 night (Jul 26–27) · Free cancel until Jul 25</div>
+  </div>
+  <div class="budget-item-amount confirmed">€113.00</div>
+</div>
+
+<div class="budget-row">
+  <div class="budget-item-info">
+    <div class="budget-item-name">🏡 Uberaba — Victor's Family</div>
+    <div class="budget-item-detail">4 nights (Jul 18–22) · Home sweet home</div>
+  </div>
+  <div class="budget-item-amount free">FREE 🎉</div>
+</div>
+
+<div class="budget-subtotal">
+  <span>Confirmed Subtotal</span>
+  <span class="confirmed">€2,143.96</span>
+</div>
+
+<!-- ESTIMATED COSTS -->
+<div class="budget-section-label" style="margin-top: 1.5rem;">
+  <span class="budget-dot" style="background: var(--orange);"></span>
+  Estimated / Still TBD
+</div>
+
+<div class="budget-row estimated">
+  <div class="budget-item-info">
+    <div class="budget-item-name">✈️ Domestic: Rio → Uberaba</div>
+    <div class="budget-item-detail">Jul 18 · GOL/LATAM/Azul · Both passengers</div>
+  </div>
+  <div class="budget-item-amount estimate">~€150–300</div>
+</div>
+
+<div class="budget-row estimated">
+  <div class="budget-item-info">
+    <div class="budget-item-name">✈️ Domestic: Uberaba → ES Region</div>
+    <div class="budget-item-detail">Jul 22 · Could fly to Vitória · Both passengers</div>
+  </div>
+  <div class="budget-item-amount estimate">~€150–350</div>
+</div>
+
+<div class="budget-row estimated">
+  <div class="budget-item-info">
+    <div class="budget-item-name">🏠 Ubu / Wedding Area</div>
+    <div class="budget-item-detail">Jul 22–26 · 3-4 nights · Family arrangement or Airbnb?</div>
+  </div>
+  <div class="budget-item-amount estimate">~€0–400</div>
+</div>
+
+<div class="budget-row estimated">
+  <div class="budget-item-info">
+    <div class="budget-item-name">🏠 Alegre — 1 Night</div>
+    <div class="budget-item-detail">Jul 27 · Small town, budget-friendly</div>
+  </div>
+  <div class="budget-item-amount estimate">~€40–80</div>
+</div>
+
+<div class="budget-row estimated">
+  <div class="budget-item-info">
+    <div class="budget-item-name">🚌 Overnight Bus Alegre → Rio</div>
+    <div class="budget-item-detail">Jul 27 evening · Both passengers · ~8-10h ride</div>
+  </div>
+  <div class="budget-item-amount estimate">~€30–60</div>
+</div>
+
+<div class="budget-row estimated">
+  <div class="budget-item-info">
+    <div class="budget-item-name">🚕 Local Transport & Ubers</div>
+    <div class="budget-item-detail">Airport transfers, Ubu→Vitória, Vitória→Alegre, taxis</div>
+  </div>
+  <div class="budget-item-amount estimate">~€100–200</div>
+</div>
+
+<div class="budget-row estimated">
+  <div class="budget-item-info">
+    <div class="budget-item-name">🍽️ Food & Drinks</div>
+    <div class="budget-item-detail">13 days · ~€30–50/day for 2 (eating out in Brazil)</div>
+  </div>
+  <div class="budget-item-amount estimate">~€400–650</div>
+</div>
+
+<div class="budget-subtotal" style="border-color: rgba(243,156,18,0.3);">
+  <span>Estimated Remaining</span>
+  <span class="estimate">~€870–2,040</span>
+</div>
+
+<!-- GRAND TOTAL -->
+<div class="budget-grand-total">
+  <div class="budget-grand-label">Estimated Grand Total (couple)</div>
+  <div class="budget-grand-range">
+    <span class="budget-grand-low">€3,014</span>
+    <span class="budget-grand-sep">to</span>
+    <span class="budget-grand-high">€4,184</span>
+  </div>
+  <div class="budget-grand-per">That's roughly <strong style="color:var(--gold);">€1,507 — €2,092 per person</strong></div>
+  <div class="budget-grand-note">Andinho mode: aim for the low end. Victor mode: you know what to do. 💅</div>
+</div>
+```
+
+  </div>
+
+  <!-- OPEN ITEMS -->
+
+  <div class="section-header">
+    <div class="section-icon" style="background: rgba(243,156,18,0.15);">📝</div>
+    <div>
+      <h2>Still On the To-Do List</h2>
+      <p>Things we need to nail down, gorgeous humans</p>
+    </div>
+  </div>
+
+  <div style="display:grid; gap:0.75rem;">
+    <div class="day-content" style="border-left: 3px solid var(--green);">
+      <p><strong style="color:var(--green);">1.</strong> <strong><s>Pick Rio accommodation</s></strong> — ✅ Bossa 107 in Ipanema! €247 for 2 nights (Jul 16–18). Flying to Uberaba on the 18th!</p>
+    </div>
+    <div class="day-content" style="border-left: 3px solid var(--orange);">
+      <p><strong style="color:var(--orange);">2.</strong> <strong>Domestic flights</strong> — Rio → Uberaba (Jul 18) and Uberaba → Vitória/ES (Jul 22). Book these ASAP!</p>
+    </div>
+    <div class="day-content" style="border-left: 3px solid var(--green);">
+      <p><strong style="color:var(--green);">3.</strong> <strong><s>Uberaba accommodation</s></strong> — ✅ Staying with Victor's family! Free.99, baby.</p>
+    </div>
+    <div class="day-content" style="border-left: 3px solid var(--orange);">
+      <p><strong style="color:var(--orange);">4.</strong> <strong>Ubu/Wedding accommodation</strong> — Jul 22-26. Is there a wedding block or family arrangement?</p>
+    </div>
+    <div class="day-content" style="border-left: 3px solid var(--purple);">
+      <p><strong style="color:var(--purple);">5.</strong> <strong>Vitória accommodation</strong> — 1 night (Jul 26-27). 🔍 Searching now!</p>
+    </div>
+    <div class="day-content" style="border-left: 3px solid var(--orange);">
+      <p><strong style="color:var(--orange);">6.</strong> <strong>Alegre accommodation</strong> — 1 night (Jul 27).</p>
+    </div>
+    <div class="day-content" style="border-left: 3px solid var(--accent);">
+      <p><strong style="color:var(--accent);">7.</strong> <strong>Overnight bus Alegre → Rio</strong> — This is TIGHT with a 16:15 flight. Consider leaving Sunday evening to be safe. Research bus schedules!</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+
+  <div class="footer">
+    <div class="tagline">Vão com tudo, queridos! 🇧🇷</div>
+    <p>Last updated: February 22, 2026 · Your trip concierge (that's me, Claude) is always ready for updates.</p>
+    <p style="margin-top:0.5rem; font-size: 0.7rem; color: var(--text-dim);">Send me Airbnb links, hotel bookings, bus schedules — I'll update this briefing faster than Andinho can say "mas tá caro!" · Now hunting: Vitória 🔍</p>
+  </div>
+
+</main>
+
+</body>
+</html>
